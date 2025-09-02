@@ -16,7 +16,7 @@ module "azsubnet1" {
   source     = "../../modules/azure_subnet"
   subnetname = "devsubnet010901"
   vnetname   = "devvnet0109"
-  loc        = "japaneast"
+  rgname = "devrg0109"
   addrsub    = ["10.0.10.0/24"]
 }
 
@@ -25,7 +25,7 @@ module "azsubnet2" {
   source     = "../../modules/azure_subnet"
   subnetname = "devsubnet010902"
   vnetname   = "devvnet0109"
-  loc        = "japaneast"
+  rgname = "devrg0109"
   addrsub    = ["10.0.11.0/24"]
 }
 
@@ -34,7 +34,7 @@ module "azsubnetbastian" {
   source     = "../../modules/azure_subnet"
   subnetname = "devbastionsubnet0109"
   vnetname   = "devvnet0109"
-  loc        = "japaneast"
+  rgname = "devrg0109"
   addrsub    = ["10.0.12.0/24"]
 }
 

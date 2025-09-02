@@ -2,7 +2,7 @@ variable "subnetname" {
     type = string
 }
 
-variable "loc" {
+variable "rgname" {
     type = string
 }
 
