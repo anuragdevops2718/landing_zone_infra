@@ -1,0 +1,40 @@
+name: LANDING_ZONE_SETUP
+
+on:
+  push:
+    branches:
+    - main
+    - features/**
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  First_JOB:
+    name: BUILD_STAGE_1
+    runs-on: [self-hosted]
+    steps:
+    - name: Azure Login
+      uses: Azure/login@v2.3.0
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Checkout Code
+      uses: actions/checkout@v3
+
+    - name: HashiCorp - Setup Terraform
+      uses: hashicorp/setup-terraform@v2.0.3
+
+    - name: Terraform Init
+      run: terraform init
+
+    - name: Terraform Format
+      run: terraform fmt
+
+    - name: Terraform Validate
+      run: terraform validate
+
+    - name: Terraform Plan
+      run: terraform plan
+
+      
+      
