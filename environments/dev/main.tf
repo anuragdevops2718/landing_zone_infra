@@ -32,7 +32,7 @@ module "azsubnet2" {
 module "azsubnetbastian" {
   depends_on = [module.azvnet]
   source     = "../../modules/azure_subnet"
-  subnetname = "devbastionsubnet0109"
+  subnetname = "AzureBastionSubnet"
   vnetname   = "devvnet0109"
   rgname = "devrg0109"
   addrsub    = ["10.0.12.0/24"]

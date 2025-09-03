@@ -6,6 +6,7 @@ resource "azurerm_linux_virtual_machine" "azurevm" {
   admin_username      = var.username
   admin_password      = var.password     
   network_interface_ids = var.nicid
+  disable_password_authentication = false
 
 
   os_disk {
