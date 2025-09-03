@@ -16,7 +16,7 @@ jobs:
     - name: Azure Login
       uses: Azure/login@v2.3.0
       with:
-        creds: ${{ secrets.AZURE_CREDENTIALS }}
+        creds: ${{ secrets.GH_AZURE_CREDS }}
 
     - name: Checkout Code
       uses: actions/checkout@v3
