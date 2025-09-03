@@ -14,7 +14,7 @@ jobs:
     runs-on: [self-hosted]
     steps:
     - name: Azure Login
-      uses: Azure/login@v2.3.0
+      uses: azure/login@v2.3.0
       with:
         creds: ${{ secrets.GH_AZURE_CREDS }}
 
