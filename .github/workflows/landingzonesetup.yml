@@ -12,6 +12,11 @@ jobs:
   First_JOB:
     name: BUILD_STAGE_1
     runs-on: [self-hosted]
+
+    permissions:
+      id-token: write
+      contents: read
+  
     steps:
     - name: Azure Login
       uses: azure/login@v2.3.0
